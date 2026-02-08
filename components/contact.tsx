@@ -8,12 +8,14 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    projectType: "",
     message: "",
   })
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  // ✅ CORRECTION ICI : Ajout de HTMLSelectElement
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -37,7 +39,7 @@ const Contact = () => {
         setSubmitted(true)
         setTimeout(() => {
           setSubmitted(false)
-          setFormData({ name: "", email: "", message: "" })
+          setFormData({ name: "", email: "", projectType: "", message: "" })
         }, 3000)
       }
     } catch (error) {
@@ -82,6 +84,21 @@ const Contact = () => {
                 required
                 disabled={isSubmitting}
               />
+              <select
+                name="projectType"
+                value={formData.projectType}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 bg-white text-gray-700"
+                required
+                disabled={isSubmitting}
+              >
+                <option value="" disabled>Select project type</option>
+                <option value="web-app">Web Application (Dashboard, CRM, SaaS)</option>
+                <option value="rest-api">REST API Development</option>
+                <option value="website">Website / Landing Page</option>
+                <option value="maintenance">Maintenance & Optimization</option>
+                <option value="other">Other</option>
+              </select>
               <textarea
                 name="message"
                 placeholder="Tell me about your project..."
