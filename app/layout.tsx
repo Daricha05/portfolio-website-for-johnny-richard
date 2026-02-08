@@ -8,48 +8,55 @@ const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Full Stack Web Developer | Web Applications & API Development | Johnny Richard",
+  metadataBase: new URL("https://johnny-richard-dev.vercel.app"),
+  title: "Johnny Richard - Full Stack Web Developer",
   description:
-    "Full Stack Web Developer specialized in building scalable web applications and robust APIs using Spring Boot, Django, Laravel, FastAPI, Express.js and React. Available for freelance projects worldwide. Custom dashboards, CRMs, internal tools, and API development.",
+    "Full Stack Web Developer specializing in scalable web applications and robust APIs. React, Django, Spring Boot, Laravel, FastAPI. Available for freelance projects worldwide.",
   keywords: [
     "Full Stack Developer",
     "Freelance Developer",
     "Web Developer Madagascar",
     "API Developer",
-    "Spring Boot Developer",
+    "React Developer",
     "Django Developer",
+    "Spring Boot Developer",
     "Laravel Developer",
     "FastAPI Developer",
-    "React Developer",
-    "Web App Development",
+    "Web Application Development",
     "REST API Development",
-    "Freelance Web Developer",
-    "Custom Software Developer",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Johnny Richard | Full Stack Web Developer",
+    title: "Johnny Richard - Full Stack Web Developer",
     description:
-      "Building scalable web applications and robust APIs. Spring Boot, Django, Laravel, FastAPI, Express.js, React.",
+      "Building scalable web applications and API-driven platforms. React, Django, Spring Boot, Laravel, FastAPI.",
     type: "website",
+    url: "https://johnny-richard-dev.vercel.app",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Johnny Richard – Full Stack Web Developer",
+      },
+    ],
   },
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/code.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/web.png",
         media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      }
     ],
-    apple: "/apple-icon.png",
+    apple: "/code.png",
   },
-    generator: 'v0.app'
+    generator: 'Johnny Richard'
 }
 
 export default function RootLayout({
