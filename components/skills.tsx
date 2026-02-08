@@ -63,13 +63,15 @@ const Skills = () => {
                 key={group.id}
                 className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-lg transition-all duration-300 flex flex-col gap-4"
               >
-                {/* Icon container with teal background */}
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
-                  <IconComponent className="w-6 h-6 text-teal-600" />
-                </div>
+                <div className="flex items-center gap-4">
+                  {/* Icon container with teal background */}
+                  <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+                    <IconComponent className="w-6 h-6 text-teal-600" />
+                  </div>
 
-                {/* Category title */}
-                <h3 className="text-xl font-semibold text-black">{group.category}</h3>
+                  {/* Category title */}
+                  <h3 className="text-xl font-semibold text-black">{group.category}</h3>
+                </div>
 
                 {/* Skills list */}
                 <p className="text-gray-600 text-sm leading-relaxed">{group.skills.join(", ")}</p>

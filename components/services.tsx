@@ -1,6 +1,6 @@
 "use client"
 
-import { Code2, Server, Gauge } from "lucide-react"
+import { Code2, Server, Wrench } from "lucide-react"
 
 const services = [
   {
@@ -16,7 +16,7 @@ const services = [
       "High-performance REST APIs, secure authentication, business logic implementation, third-party integrations, and complete documentation.",
   },
   {
-    icon: Gauge,
+    icon: Wrench,
     title: "Maintenance & Performance Optimization",
     description:
       "Debugging, refactoring, stability improvements, database optimization, and long-term technical support for existing applications.",
@@ -42,7 +42,7 @@ const Services = () => {
             return (
               <div
                 key={idx}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-200"
+                className="bg-white p-8 rounded-xl shadow-sm border border-gray-200 hover:border-teal-300 hover:shadow-lg transition"
               >
                 <div className="mb-4">
                   <Icon className="w-8 h-8 text-teal-600" />

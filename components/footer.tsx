@@ -3,6 +3,8 @@
 import { Github, Linkedin, Mail } from "lucide-react"
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="bg-black text-white py-12 px-6">
       <div className="max-w-7xl mx-auto">
@@ -35,12 +37,12 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#skills" className="hover:text-white transition">
-                  Backend: Spring, Django, Laravel
+                  Backend: Express, Spring boot, Django, Laravel
                 </a>
               </li>
               <li>
                 <a href="#skills" className="hover:text-white transition">
-                  Frontend: React, Vite
+                  Frontend: React, Vite, TailwindCSS
                 </a>
               </li>
               <li>
@@ -55,10 +57,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Connect</h3>
             <div className="flex gap-4">
-              <a href="https://github.com/Daricha05" className="text-gray-400 hover:text-teal-500 transition" target="_blank">
+              <a href="https://github.com/Daricha05" className="text-gray-400 hover:text-teal-500 transition" target="_blank" rel="noopener noreferrer">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://www.linkedin.com/in/johnnyrichard/" className="text-gray-400 hover:text-teal-500 transition" target="_blank">
+              <a href="https://www.linkedin.com/in/johnnyrichard/" className="text-gray-400 hover:text-teal-500 transition" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-6 h-6" />
               </a>
               <a href="mailto:johnnyricharde5@gmail.com" className="text-gray-400 hover:text-teal-500 transition" target="_blank">
@@ -70,7 +72,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>© 2026 Johnny Richard — Building the future, one app at a time.</p>
+          <p>© {currentYear} Johnny Richard — Building the future, one app at a time.</p>
         </div>
       </div>
     </footer>

@@ -67,11 +67,14 @@ const Process = () => {
                   {step.number}
                 </div>
 
-                {/* Icon */}
-                <Icon className="w-8 h-8 text-teal-600 mb-4" />
+                <div className="flex items-center gap-4">
+                  {/* Icon */}
+                  <Icon className="w-8 h-8 text-teal-600 mb-4" />
 
-                {/* Content */}
-                <h3 className="text-lg font-bold text-black mb-2">{step.title}</h3>
+                  {/* Content */}
+                  <h3 className="text-lg font-bold text-black mb-2">{step.title}</h3>
+                </div>
+
                 <p className="text-sm text-gray-600">{step.description}</p>
               </div>
             )

@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Mail, MapPin, Phone, CheckCircle2 } from "lucide-react"
 
@@ -12,6 +11,7 @@ const Contact = () => {
     message: "",
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -20,13 +20,32 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: "", email: "", message: "" })
-    }, 3000)
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch("https://formspree.io/f/mojnvarr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({ name: "", email: "", message: "" })
+        }, 3000)
+      }
+    } catch (error) {
+      console.error("Error:", error)
+      alert("Une erreur s'est produite. Veuillez réessayer.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -51,6 +70,7 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600"
                 required
+                disabled={isSubmitting}
               />
               <input
                 type="email"
@@ -60,6 +80,7 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600"
                 required
+                disabled={isSubmitting}
               />
               <textarea
                 name="message"
@@ -69,16 +90,20 @@ const Contact = () => {
                 rows={5}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 resize-none"
                 required
+                disabled={isSubmitting}
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitted ? (
                   <>
                     <CheckCircle2 className="w-5 h-5" />
                     Message sent! I'll respond within 24h
                   </>
+                ) : isSubmitting ? (
+                  "Sending..."
                 ) : (
                   "Send Message"
                 )}

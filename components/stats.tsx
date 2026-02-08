@@ -41,10 +41,12 @@ const Stats = () => {
                 key={index}
                 className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-lg transition"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <Icon className="w-8 h-8 text-teal-600" />
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <Icon className="w-8 h-8 text-teal-600" />
+                  </div>
+                  <p className="text-2xl md:text-3xl font-bold text-black mb-2">{stat.value}</p>
                 </div>
-                <p className="text-2xl md:text-3xl font-bold text-black mb-2">{stat.value}</p>
                 <p className="text-sm md:text-base font-semibold text-black mb-1">{stat.label}</p>
                 <p className="text-xs md:text-sm text-gray-600">{stat.description}</p>
               </div>
