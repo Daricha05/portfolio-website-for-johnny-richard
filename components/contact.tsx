@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Mail, MapPin, Phone, CheckCircle2 } from "lucide-react"
 
 const Contact = () => {
@@ -13,8 +13,11 @@ const Contact = () => {
   })
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  
+  // Pour éviter les mises à jour d'état sur un composant démonté
+  const isMountedRef = useRef(true)
 
-  // ✅ CORRECTION ICI : Ajout de HTMLSelectElement
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -25,6 +28,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
 
     try {
       const response = await fetch("https://formspree.io/f/mojnvarr", {
@@ -36,17 +40,28 @@ const Contact = () => {
       })
 
       if (response.ok) {
-        setSubmitted(true)
-        setTimeout(() => {
-          setSubmitted(false)
-          setFormData({ name: "", email: "", projectType: "", message: "" })
-        }, 3000)
+        if (isMountedRef.current) {
+          setSubmitted(true)
+          // Réinitialisation après 3 secondes
+          setTimeout(() => {
+            if (isMountedRef.current) {
+              setSubmitted(false)
+              setFormData({ name: "", email: "", projectType: "", message: "" })
+            }
+          }, 3000)
+        }
+      } else {
+        throw new Error("Failed to send message")
       }
-    } catch (error) {
-      console.error("Error:", error)
-      alert("Une erreur s'est produite. Veuillez réessayer.")
+    } catch (err) {
+      console.error("Error:", err)
+      if (isMountedRef.current) {
+        setError("Une erreur s'est produite. Veuillez réessayer.")
+      }
     } finally {
-      setIsSubmitting(false)
+      if (isMountedRef.current) {
+        setIsSubmitting(false)
+      }
     }
   }
 
@@ -109,6 +124,14 @@ const Contact = () => {
                 required
                 disabled={isSubmitting}
               ></textarea>
+              
+              {/* Affichage des erreurs */}
+              {error && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                  {error}
+                </div>
+              )}
+
               <button
                 type="submit"
                 disabled={isSubmitting}
