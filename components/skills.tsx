@@ -1,10 +1,62 @@
 "use client"
 
-import { Briefcase, Layers, Rocket, ShieldCheck } from "lucide-react"
+import {
+  Briefcase,
+  Braces,
+  Bot,
+  Cable,
+  Container,
+  Database,
+  GitBranch,
+  Globe,
+  Layers,
+  MessageSquare,
+  Rocket,
+  Server,
+  ShieldCheck,
+  Workflow,
+} from "lucide-react"
 import { useTranslation } from "react-i18next"
 
 const Skills = () => {
   const { t } = useTranslation()
+
+  const getTechIcon = (skill: string) => {
+    const key = skill.toLowerCase()
+
+    if (key.includes("express") || key.includes("fastapi") || key.includes("spring") || key.includes("laravel")) {
+      return Server
+    }
+    if (key.includes("react") || key.includes("next")) {
+      return Globe
+    }
+    if (key.includes("postgres") || key.includes("mysql") || key.includes("mongo")) {
+      return Database
+    }
+    if (key.includes("rest") || key.includes("websocket")) {
+      return Cable
+    }
+    if (key.includes("n8n")) {
+      return Workflow
+    }
+    if (key.includes("javascript")) {
+      return Braces
+    }
+    if (key.includes("llm") || key.includes("groq")) {
+      return Bot
+    }
+    if (key.includes("discord")) {
+      return MessageSquare
+    }
+    if (key.includes("docker")) {
+      return Container
+    }
+    if (key.includes("git") || key.includes("ci/cd")) {
+      return GitBranch
+    }
+
+    return Layers
+  }
 
   const freelanceStacks = [
     t("skills.featuredStacks.0"),
@@ -91,11 +143,18 @@ const Skills = () => {
                 <p className="text-sm text-gray-700 leading-relaxed">{group.delivery}</p>
 
                 <div className="flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <span key={skill} className="text-xs bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full font-medium">
-                      {skill}
-                    </span>
-                  ))}
+                  {group.skills.map((skill) => {
+                    const TechIcon = getTechIcon(skill)
+                    return (
+                      <span
+                        key={skill}
+                        className="inline-flex items-center gap-1.5 text-xs bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full font-medium"
+                      >
+                        <TechIcon className="w-3.5 h-3.5" />
+                        {skill}
+                      </span>
+                    )
+                  })}
                 </div>
               </div>
             )
