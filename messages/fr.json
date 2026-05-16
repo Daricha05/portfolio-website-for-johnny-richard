@@ -160,46 +160,70 @@
     ]
   },
   "skills": {
-    "title": "Technologies utilisees",
-    "subtitle": "Une boite a outils complete pour creer des applications et API modernes et evolutives.",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "databases": "Bases de donnees",
-      "apis": "API",
-      "performance": "Performance",
-      "devops": "DevOps"
-    }
+    "title": "Technologies que j'utilise pour livrer vite et bien",
+    "subtitle": "Des stacks eprouvees pour creer des applications robustes, maintenables et pretes production.",
+    "featuredLabel": "Stacks de predilection",
+    "featuredStacks": [
+      "Express + React + PostgreSQL + REST",
+      "FastAPI + Next.js + PostgreSQL + REST",
+      "n8n + JavaScript + LLM"
+    ],
+    "blocks": [
+      {
+        "title": "Applications web",
+        "delivery": "Je livre des applications web completes avec backend fiable, interface moderne et API REST claires.",
+        "level": "Avance"
+      },
+      {
+        "title": "API et backend",
+        "delivery": "Je construis des API securisees, documentees et faciles a integrer dans vos outils metier.",
+        "level": "Avance"
+      },
+      {
+        "title": "Automatisation et IA",
+        "delivery": "Je mets en place des workflows n8n pour automatiser emails, CRM, relances et reporting recurrent.",
+        "level": "Confirme"
+      },
+      {
+        "title": "Deploiement et fiabilite",
+        "delivery": "Je prepare des environnements stables avec Docker, CI/CD et bonnes pratiques de mise en production.",
+        "level": "Confirme"
+      }
+    ],
+    "ctaText": "Besoin de cette stack pour votre projet ?",
+    "ctaButton": "Discutons de votre projet"
   },
   "process": {
     "title": "Ma methode de travail",
-    "subtitle": "Un processus transparent et collaboratif pour livrer des resultats fiables.",
-    "ready": "Pret a lancer votre projet ?",
-    "cta": "Obtenir une consultation gratuite",
+    "badge": "Processus freelance",
+    "stepLabel": "Etape",
+    "subtitle": "Un processus simple, transparent et oriente resultat pour livrer votre projet sans surprise.",
+    "ready": "Je peux vous proposer un plan d'action concret sous 48h.",
+    "cta": "Discutons de votre projet",
     "steps": [
       {
-        "title": "Consultation",
-        "description": "Consultation initiale gratuite pour comprendre vos objectifs, besoins et delais."
+        "title": "Cadrage",
+        "description": "Nous clarifions vos objectifs business, vos priorites et vos contraintes pour cadrer un plan d'action avec estimation delai/budget."
       },
       {
-        "title": "Planification et proposition",
-        "description": "Plan de projet detaille, architecture technique et proposition tarifaire transparente."
+        "title": "Architecture et roadmap",
+        "description": "Je definis la solution technique adaptee, puis une roadmap claire avec jalons et livraisons intermediaires."
       },
       {
         "title": "Developpement",
-        "description": "Developpement en code propre avec mises a jour regulieres et communication transparente."
+        "description": "Je developpe en iterations courtes avec points de suivi reguliers et fonctionnalites testables a chaque etape."
       },
       {
-        "title": "Tests et qualite",
-        "description": "Tests rigoureux, corrections de bugs et optimisation pour garantir fiabilite et performances."
+        "title": "Qualite et validation",
+        "description": "Je valide stabilite, performance et cas critiques avant mise en ligne, avec checklist QA et correctifs."
       },
       {
         "title": "Mise en production",
-        "description": "Deploiement securise avec monitoring adapte et configuration post-lancement."
+        "description": "Je deploie proprement avec configuration, monitoring et securisation de base pour un demarrage sans friction."
       },
       {
-        "title": "Support",
-        "description": "Support et maintenance continus pour garder votre application performante."
+        "title": "Suivi et evolution",
+        "description": "Je reste disponible pour support, ameliorations et evolutions produit selon vos priorites court et long terme."
       }
     ]
   },

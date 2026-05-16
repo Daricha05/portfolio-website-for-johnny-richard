@@ -160,46 +160,70 @@
     ]
   },
   "skills": {
-    "title": "Technologies I Use",
-    "subtitle": "A comprehensive toolkit for building modern, scalable applications and APIs.",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "databases": "Databases",
-      "apis": "APIs",
-      "performance": "Performance",
-      "devops": "DevOps"
-    }
+    "title": "Technologies I use to deliver fast and reliably",
+    "subtitle": "Proven stacks to build robust, maintainable, production-ready applications.",
+    "featuredLabel": "Preferred stacks",
+    "featuredStacks": [
+      "Express + React + PostgreSQL + REST",
+      "FastAPI + Next.js + PostgreSQL + REST",
+      "n8n + JavaScript + LLM"
+    ],
+    "blocks": [
+      {
+        "title": "Web applications",
+        "delivery": "I deliver complete web applications with reliable backends, modern interfaces, and clean REST APIs.",
+        "level": "Advanced"
+      },
+      {
+        "title": "API and backend",
+        "delivery": "I build secure, documented APIs that are easy to integrate with business tools.",
+        "level": "Advanced"
+      },
+      {
+        "title": "Automation and AI",
+        "delivery": "I build n8n workflows to automate emails, CRM updates, follow-ups, and recurring reporting.",
+        "level": "Proficient"
+      },
+      {
+        "title": "Deployment and reliability",
+        "delivery": "I prepare stable environments with Docker, CI/CD, and production-ready deployment practices.",
+        "level": "Proficient"
+      }
+    ],
+    "ctaText": "Need this stack for your project?",
+    "ctaButton": "Let's discuss your project"
   },
   "process": {
     "title": "How I Work",
-    "subtitle": "A transparent, collaborative process designed to deliver results you can trust.",
-    "ready": "Ready to start your project?",
-    "cta": "Get Free Consultation",
+    "badge": "Freelance process",
+    "stepLabel": "Step",
+    "subtitle": "A simple, transparent, results-driven process to deliver your project without surprises.",
+    "ready": "I can provide a concrete action plan within 48 hours.",
+    "cta": "Let's discuss your project",
     "steps": [
       {
-        "title": "Consultation",
-        "description": "Free initial consultation to understand your project goals, requirements, and timeline."
+        "title": "Scoping",
+        "description": "We clarify business goals, priorities, and constraints to define an action plan with timeline and budget estimate."
       },
       {
-        "title": "Planning & Proposal",
-        "description": "Detailed project plan, technical architecture, and transparent pricing proposal."
+        "title": "Architecture & Roadmap",
+        "description": "I define the right technical solution and provide a clear roadmap with milestones and incremental deliveries."
       },
       {
         "title": "Development",
-        "description": "Clean code development with regular updates and transparent communication throughout."
+        "description": "I build in short iterations with regular checkpoints and testable features at each stage."
       },
       {
-        "title": "Testing & QA",
-        "description": "Rigorous testing, bug fixes, and optimization to ensure reliability and performance."
+        "title": "Quality & Validation",
+        "description": "I validate stability, performance, and critical flows before launch, with QA checklist and fixes applied."
       },
       {
         "title": "Deployment",
-        "description": "Safe deployment to production with proper monitoring and post-launch setup."
+        "description": "I deploy cleanly with configuration, monitoring, and baseline security for a smooth production start."
       },
       {
-        "title": "Support",
-        "description": "Ongoing support and maintenance to keep your application running smoothly."
+        "title": "Follow-up & Evolution",
+        "description": "I stay available for support, improvements, and product evolution based on your short- and long-term priorities."
       }
     ]
   },

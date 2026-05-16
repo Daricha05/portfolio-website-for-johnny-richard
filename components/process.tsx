@@ -46,50 +46,54 @@ const Process = () => {
   ]
 
   return (
-    <section id="process" className="py-20 md:py-28 px-6 bg-white">
+    <section id="process" className="py-20 md:py-28 px-4 md:px-6 bg-gradient-to-b from-white via-gray-50/40 to-white">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
+          <span className="inline-flex items-center rounded-full bg-teal-50 border border-teal-200 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-teal-700 mb-5">
+            {t("process.badge")}
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">{t("process.title")}</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             {t("process.subtitle")}
           </p>
         </div>
 
-        {/* Steps Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step) => {
             const Icon = step.icon
             return (
               <div
                 key={step.number}
-                className="relative p-6 md:p-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-lg transition"
+                className="group relative p-6 md:p-7 bg-white border border-gray-200 rounded-2xl hover:border-teal-300 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                {/* Step number badge */}
-                <div className="absolute -top-4 -left-4 w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="absolute -top-4 -left-4 w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm shadow-md shadow-teal-200">
                   {step.number}
                 </div>
 
-                <div className="flex items-center gap-4">
-                  {/* Icon */}
-                  <Icon className="w-8 h-8 text-teal-600 mb-4" />
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center group-hover:bg-teal-100 transition-colors duration-300">
+                    <Icon className="w-6 h-6 text-teal-600" />
+                  </div>
 
-                  {/* Content */}
-                  <h3 className="text-lg font-bold text-black mb-2">{step.title}</h3>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-1">
+                      {t("process.stepLabel")} {step.number}
+                    </p>
+                    <h3 className="text-lg font-bold text-black leading-tight">{step.title}</h3>
+                  </div>
                 </div>
 
-                <p className="text-sm text-gray-600">{step.description}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{step.description}</p>
               </div>
             )
           })}
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">{t("process.ready")}</p>
+        <div className="mt-14 md:mt-16 rounded-2xl border border-teal-200 bg-gradient-to-r from-teal-50 to-cyan-50 p-6 md:p-8 text-center">
+          <p className="text-gray-700 mb-5 text-sm md:text-base">{t("process.ready")}</p>
           <a
             href="#contact"
-            className="inline-block bg-teal-600 hover:bg-teal-500 text-white px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold transition"
+            className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-500 text-white px-8 md:px-10 py-3 rounded-xl font-semibold transition"
           >
             {t("process.cta")}
           </a>
