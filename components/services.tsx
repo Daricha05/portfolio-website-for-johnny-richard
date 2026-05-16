@@ -1,37 +1,37 @@
 "use client"
 
 import { Code2, Server, Wrench } from "lucide-react"
-
-const services = [
-  {
-    icon: Code2,
-    title: "Web Application Development",
-    description:
-      "Custom dashboards, CRMs, internal tools, management systems, and modern web applications built with clean architectures and scalable backends.",
-  },
-  {
-    icon: Server,
-    title: "API Development & Integration",
-    description:
-      "High-performance REST APIs, secure authentication, business logic implementation, third-party integrations, and complete documentation.",
-  },
-  {
-    icon: Wrench,
-    title: "Maintenance & Performance Optimization",
-    description:
-      "Debugging, refactoring, stability improvements, database optimization, and long-term technical support for existing applications.",
-  },
-]
+import { useTranslation } from "react-i18next"
 
 const Services = () => {
+  const { t } = useTranslation()
+
+  const services = [
+    {
+      icon: Code2,
+      title: t("services.items.0.title"),
+      description: t("services.items.0.description"),
+    },
+    {
+      icon: Server,
+      title: t("services.items.1.title"),
+      description: t("services.items.1.description"),
+    },
+    {
+      icon: Wrench,
+      title: t("services.items.2.title"),
+      description: t("services.items.2.description"),
+    },
+  ]
+
   return (
     <section id="services" className="py-20 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
         <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Services I Offer</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">{t("services.title")}</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Comprehensive solutions for building, improving, and scaling your digital products.
+            {t("services.subtitle")}
           </p>
         </div>
 

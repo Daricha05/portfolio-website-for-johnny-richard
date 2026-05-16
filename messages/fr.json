@@ -1,0 +1,248 @@
+{
+  "navigation": {
+    "work": "Projets",
+    "services": "Services",
+    "skills": "Competences",
+    "howIWork": "Ma methode",
+    "contact": "Contact",
+    "freeConsultation": "Consultation gratuite",
+    "language": "Langue"
+  },
+  "hero": {
+    "badge": "Developpeur Full Stack Web et API",
+    "titleStart": "Je cree des",
+    "titleHighlightOne": "applications web evolutives",
+    "titleMiddle": "et des",
+    "titleHighlightTwo": "API robustes",
+    "subtitle": "J'accompagne les entreprises et startups dans la conception de solutions digitales modernes avec Spring Boot, Django, FastAPI, Laravel, Express.js et React.",
+    "viewWork": "Voir mes projets",
+    "getConsultation": "Obtenir une consultation gratuite",
+    "supporting": "Code propre • Livraison rapide • Consultation gratuite • Reponse en 24h"
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "10+",
+        "label": "Projets livres",
+        "description": "Realises dans divers secteurs et a differentes echelles"
+      },
+      {
+        "value": "3+",
+        "label": "Annees d'experience",
+        "description": "Apprentissage continu et progression professionnelle"
+      },
+      {
+        "value": "24h",
+        "label": "Temps de reponse",
+        "description": "Communication rapide garantie"
+      },
+      {
+        "value": "100%",
+        "label": "Livraison a temps",
+        "description": "Tous les projets livres selon les delais convenus"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projets en avant",
+    "subtitle": "Une selection de mes travaux recents en applications evolutives et API robustes.",
+    "viewDetails": "Voir les details",
+    "openImage": "Voir l'image",
+    "contactCta": "Discuter de ce type de projet",
+    "closeHint": "Cliquez n'importe ou pour fermer",
+    "detail": {
+      "title": "Details du projet",
+      "problem": "Contexte",
+      "solution": "Solution",
+      "impact": "Impact",
+      "stack": "Stack technique"
+    },
+    "status": {
+      "inProgress": "En cours",
+      "completed": "Livre"
+    },
+    "items": [
+      {
+        "title": "Application web de gestion de paie",
+        "role": "Developpeur Full Stack",
+        "company": "Projet client",
+        "location": "Madagascar",
+        "period": "2024",
+        "description": "Une plateforme collaborative de gestion de paie pour cabinets RH et entreprises, facilitant l'echange de donnees et l'automatisation des traitements.",
+        "problem": "Les echanges de donnees de paie etaient manuels, lents et sources d'erreurs entre equipes RH et entreprises.",
+        "solution": "Mise en place d'une plateforme centralisee avec workflows collaboratifs et automatisation des traitements critiques.",
+        "impact": "Traitement plus rapide, meilleure fiabilite des donnees et gain de temps operationnel pour les equipes metier."
+      },
+      {
+        "title": "Plateforme de messagerie interne",
+        "role": "Developpeur Full Stack",
+        "company": "Projet client",
+        "location": "Madagascar",
+        "period": "2024",
+        "description": "Un systeme de messagerie d'entreprise en temps reel pour ameliorer la communication entre employes et clients.",
+        "problem": "Les equipes perdaient du temps avec des canaux disperses et un manque de reactivite sur les echanges sensibles.",
+        "solution": "Developpement d'une messagerie temps reel avec canaux structures, notifications et historique centralise.",
+        "impact": "Communication plus fluide, reduction des delais de reponse et meilleure coordination interne-externe."
+      },
+      {
+        "title": "Plateforme CRM multi-ecoles",
+        "role": "Developpeur Backend",
+        "company": "Projet client",
+        "location": "Madagascar",
+        "period": "2024",
+        "description": "Un systeme complet de gestion scolaire couvrant inscriptions, eleves, finances, permissions et tableaux de bord multi-etablissements.",
+        "problem": "La gestion multi-ecoles etait fragmentee, avec peu de visibilite sur les donnees academiques et financieres.",
+        "solution": "Conception d'un CRM centralise avec gestion des roles, modules metier et dashboards consolides.",
+        "impact": "Pilotage simplifie des etablissements, suivi plus precis et meilleure prise de decision administrative."
+      },
+      {
+        "title": "Plateforme nationale de visualisation de donnees",
+        "role": "Developpeur Laravel",
+        "company": "INSTAT",
+        "location": "Antananarivo",
+        "period": "2024",
+        "description": "Concue pour l'INSTAT Madagascar. Des tableaux de bord dynamiques pour visualiser les statistiques nationales d'import/export et les donnees business.",
+        "problem": "Les donnees nationales etaient difficiles a exploiter rapidement pour l'analyse economique.",
+        "solution": "Creation de dashboards interactifs avec visualisations claires, filtres metier et consultation simplifiee.",
+        "impact": "Lecture plus rapide des tendances, meilleure diffusion de l'information statistique et support a la decision."
+      },
+      {
+        "title": "Webya",
+        "role": "Developpeur Web Full Stack",
+        "company": "BIENFE",
+        "location": "Antananarivo",
+        "period": "En cours",
+        "description": "Developpement d'une plateforme web permettant aux PME, startups et acteurs du secteur touristique de creer rapidement des sites web professionnels personnalises a cout reduit.",
+        "problem": "Les petites structures avaient besoin d'une presence web professionnelle mais manquaient de budget et de delais.",
+        "solution": "Developpement d'une plateforme de creation rapide de sites personnalises avec une architecture evolutive.",
+        "impact": "Mise en ligne acceleree, reduction des couts de lancement et accessibilite renforcee pour les acteurs locaux."
+      },
+      {
+        "title": "Besti",
+        "role": "Developpeur Backend",
+        "company": "BIENFE",
+        "location": "Antananarivo",
+        "period": "Avril 2025",
+        "description": "Conception et developpement d'une application web de gestion de devis pour faciliter les echanges entre les clients et la societe Bienfe.",
+        "problem": "Le suivi des devis manquait de centralisation et ralentissait la relation commerciale client-entreprise.",
+        "solution": "Mise en place d'une application de gestion des devis avec parcours clair, historique et suivi des demandes.",
+        "impact": "Processus commercial fluidifie, meilleure tracabilite et collaboration plus efficace avec les clients."
+      },
+      {
+        "title": "Inbox Zero Automatiser",
+        "role": "Developpeur IA, automatisation",
+        "company": "Perso",
+        "location": "Antananarivo",
+        "period": "Avril 2025",
+        "description": "Automatisation complete de la boite mail: classification IA des emails, alertes urgentes sur Discord, envoi de lien de reservation, suppression des spams, etiquetage Gmail, suivi prospects et rapport hebdomadaire automatise.",
+        "problem": "Le traitement manuel des emails prenait du temps et faisait perdre des opportunites commerciales.",
+        "solution": "Workflow n8n pilote par IA pour classifier, router, notifier et enrichir automatiquement les actions email.",
+        "impact": "Inbox assainie, reactivite accrue sur les messages prioritaires et suivi commercial automatise chaque semaine."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services proposes",
+    "subtitle": "Des solutions de bout en bout pour concevoir, optimiser et faire evoluer vos produits digitaux.",
+    "items": [
+      {
+        "title": "Developpement d'applications web",
+        "description": "Dashboards sur mesure, CRM, outils internes, systemes de gestion et applications web modernes avec architectures propres et backends evolutifs."
+      },
+      {
+        "title": "Developpement et integration d'API",
+        "description": "API REST performantes, authentification securisee, logique metier, integrations tierces et documentation complete."
+      },
+      {
+        "title": "Automatisation avec n8n",
+        "description": "Conception de workflows d'automatisation pour emails, CRM, relances, qualification de prospects, synchronisation d'outils et reporting recurrent afin de gagner du temps et fiabiliser vos operations."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technologies utilisees",
+    "subtitle": "Une boite a outils complete pour creer des applications et API modernes et evolutives.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de donnees",
+      "apis": "API",
+      "performance": "Performance",
+      "devops": "DevOps"
+    }
+  },
+  "process": {
+    "title": "Ma methode de travail",
+    "subtitle": "Un processus transparent et collaboratif pour livrer des resultats fiables.",
+    "ready": "Pret a lancer votre projet ?",
+    "cta": "Obtenir une consultation gratuite",
+    "steps": [
+      {
+        "title": "Consultation",
+        "description": "Consultation initiale gratuite pour comprendre vos objectifs, besoins et delais."
+      },
+      {
+        "title": "Planification et proposition",
+        "description": "Plan de projet detaille, architecture technique et proposition tarifaire transparente."
+      },
+      {
+        "title": "Developpement",
+        "description": "Developpement en code propre avec mises a jour regulieres et communication transparente."
+      },
+      {
+        "title": "Tests et qualite",
+        "description": "Tests rigoureux, corrections de bugs et optimisation pour garantir fiabilite et performances."
+      },
+      {
+        "title": "Mise en production",
+        "description": "Deploiement securise avec monitoring adapte et configuration post-lancement."
+      },
+      {
+        "title": "Support",
+        "description": "Support et maintenance continus pour garder votre application performante."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Construisons quelque chose de grand",
+    "subtitle": "Pret a lancer votre projet ? Beneficiez d'un premier echange gratuit, clair et sans engagement.",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "votre@email.com",
+    "selectType": "Selectionnez le type de projet",
+    "messagePlaceholder": "Parlez-moi de votre projet...",
+    "error": "Une erreur s'est produite. Veuillez reessayer.",
+    "sent": "Message envoye ! Je reponds sous 24h",
+    "sending": "Envoi en cours...",
+    "send": "Envoyer le message",
+    "getInTouch": "Restons en contact",
+    "intro": "Je suis disponible pour des missions freelance, a distance ou sur site. Application web, API metier ou accompagnement long terme : je vous aide a transformer vos idees en produit fiable.",
+    "response24h": "Reponse sous 24 heures",
+    "freeConsultation": "Consultation initiale gratuite",
+    "flexible": "Horaires flexibles (a distance ou sur site)",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Localisation",
+    "locationValue": "Madagascar • Distance • Flexible",
+    "why": "Pourquoi me contacter ?",
+    "whyText": "Je prends le temps de comprendre vos objectifs et je livre des solutions solides, maintenables et orientees resultats. Premier echange offert, sans obligation.",
+    "types": {
+      "webApp": "Application web (Dashboard, CRM, SaaS)",
+      "restApi": "Developpement d'API REST",
+      "website": "Site web / Landing page",
+      "automation": "Automatisation avec n8n",
+      "other": "Autre"
+    }
+  },
+  "footer": {
+    "services": "Services",
+    "webDevelopment": "Developpement web",
+    "apiDevelopment": "Developpement API",
+    "optimization": "Optimisation",
+    "techStack": "Stack technique",
+    "backend": "Backend : Express, Spring Boot, Django, Laravel",
+    "frontend": "Frontend : React, Vite, TailwindCSS",
+    "database": "Base de donnees : PostgreSQL, MySQL, MongoDB",
+    "connect": "Restons connectes",
+    "copyright": "Construire des produits utiles, une application a la fois."
+  }
+}

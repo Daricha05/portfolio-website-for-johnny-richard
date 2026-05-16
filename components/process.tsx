@@ -1,44 +1,47 @@
 "use client"
 
 import { MessageSquare, FileText, Code2, TestTube2, Rocket, Headphones } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 const Process = () => {
+  const { t } = useTranslation()
+
   const steps = [
     {
       icon: MessageSquare,
       number: "1",
-      title: "Consultation",
-      description: "Free initial consultation to understand your project goals, requirements, and timeline.",
+      title: t("process.steps.0.title"),
+      description: t("process.steps.0.description"),
     },
     {
       icon: FileText,
       number: "2",
-      title: "Planning & Proposal",
-      description: "Detailed project plan, technical architecture, and transparent pricing proposal.",
+      title: t("process.steps.1.title"),
+      description: t("process.steps.1.description"),
     },
     {
       icon: Code2,
       number: "3",
-      title: "Development",
-      description: "Clean code development with regular updates and transparent communication throughout.",
+      title: t("process.steps.2.title"),
+      description: t("process.steps.2.description"),
     },
     {
       icon: TestTube2,
       number: "4",
-      title: "Testing & QA",
-      description: "Rigorous testing, bug fixes, and optimization to ensure reliability and performance.",
+      title: t("process.steps.3.title"),
+      description: t("process.steps.3.description"),
     },
     {
       icon: Rocket,
       number: "5",
-      title: "Deployment",
-      description: "Safe deployment to production with proper monitoring and post-launch setup.",
+      title: t("process.steps.4.title"),
+      description: t("process.steps.4.description"),
     },
     {
       icon: Headphones,
       number: "6",
-      title: "Support",
-      description: "Ongoing support and maintenance to keep your application running smoothly.",
+      title: t("process.steps.5.title"),
+      description: t("process.steps.5.description"),
     },
   ]
 
@@ -47,9 +50,9 @@ const Process = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">How I Work</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">{t("process.title")}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A transparent, collaborative process designed to deliver results you can trust.
+            {t("process.subtitle")}
           </p>
         </div>
 
@@ -83,12 +86,12 @@ const Process = () => {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">Ready to start your project?</p>
+          <p className="text-gray-600 mb-6">{t("process.ready")}</p>
           <a
             href="#contact"
             className="inline-block bg-teal-600 hover:bg-teal-500 text-white px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold transition"
           >
-            Get Free Consultation
+            {t("process.cta")}
           </a>
         </div>
       </div>

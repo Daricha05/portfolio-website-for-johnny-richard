@@ -1,9 +1,11 @@
 "use client"
 
 import { Github, Linkedin, Mail } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const { t } = useTranslation()
 
   return (
     <footer className="bg-black text-white py-12 px-6">
@@ -11,21 +13,21 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Column 1 - Brand */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <h3 className="font-bold text-lg mb-4">{t("footer.services")}</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#services" className="hover:text-white transition">
-                  Web Development
+                  {t("footer.webDevelopment")}
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-white transition">
-                  API Development
+                  {t("footer.apiDevelopment")}
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-white transition">
-                  Optimization
+                  {t("footer.optimization")}
                 </a>
               </li>
             </ul>
@@ -33,21 +35,21 @@ const Footer = () => {
 
           {/* Column 2 - Stack */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Tech Stack</h3>
+            <h3 className="font-bold text-lg mb-4">{t("footer.techStack")}</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#skills" className="hover:text-white transition">
-                  Backend: Express, Spring boot, Django, Laravel
+                  {t("footer.backend")}
                 </a>
               </li>
               <li>
                 <a href="#skills" className="hover:text-white transition">
-                  Frontend: React, Vite, TailwindCSS
+                  {t("footer.frontend")}
                 </a>
               </li>
               <li>
                 <a href="#skills" className="hover:text-white transition">
-                  Database: PostgreSQL, MySQL, MongoDB
+                  {t("footer.database")}
                 </a>
               </li>
             </ul>
@@ -55,7 +57,7 @@ const Footer = () => {
 
           {/* Column 3 - Social */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Connect</h3>
+            <h3 className="font-bold text-lg mb-4">{t("footer.connect")}</h3>
             <div className="flex gap-4">
               <a href="https://github.com/Daricha05" className="text-gray-400 hover:text-teal-500 transition" target="_blank" rel="noopener noreferrer">
                 <Github className="w-6 h-6" />
@@ -72,7 +74,9 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>© {currentYear} Johnny Richard — Building the future, one app at a time.</p>
+          <p>
+            © {currentYear} Johnny Richard — {t("footer.copyright")}
+          </p>
         </div>
       </div>
     </footer>

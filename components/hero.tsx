@@ -1,6 +1,10 @@
 "use client"
 
+import { useTranslation } from "react-i18next"
+
 const Hero = () => {
+  const { t } = useTranslation()
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: "smooth" })
@@ -12,13 +16,13 @@ const Hero = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 border border-teal-200 rounded-full px-4 py-2 mb-6 md:mb-8 bg-teal-50">
           <span className="w-2 h-2 bg-teal-600 rounded-full"></span>
-          <span className="text-xs md:text-sm text-teal-700 font-medium">Full Stack Web & API Developer</span>
+          <span className="text-xs md:text-sm text-teal-700 font-medium">{t("hero.badge")}</span>
         </div>
 
         {/* Main Title */}
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black mb-4 md:mb-6 leading-tight animate-slideInUp">
-          I build scalable <span className="text-teal-600">web applications</span> and robust{" "}
-          <span className="text-teal-600">APIs</span>
+          {t("hero.titleStart")} <span className="text-teal-600">{t("hero.titleHighlightOne")}</span> {t("hero.titleMiddle")}{" "}
+          <span className="text-teal-600">{t("hero.titleHighlightTwo")}</span>
         </h1>
 
         {/* Subtitle */}
@@ -26,8 +30,7 @@ const Hero = () => {
           className="text-base md:text-lg text-gray-600 mb-8 md:mb-12 leading-relaxed max-w-2xl mx-auto animate-slideInUp"
           style={{ animationDelay: "0.1s" }}
         >
-          I help businesses and startups develop modern digital solutions using Spring Boot, Django, FastAPI, Laravel,
-          Express.js, and React. Let's build something extraordinary together.
+          {t("hero.subtitle")}
         </p>
 
         <div
@@ -38,19 +41,19 @@ const Hero = () => {
             onClick={() => scrollToSection("projects")}
             className="bg-teal-600 hover:bg-teal-500 text-white px-6 md:px-8 py-3 rounded-lg font-medium transition w-full sm:w-auto"
           >
-            View My Work
+            {t("hero.viewWork")}
           </button>
           <button
             onClick={() => scrollToSection("contact")}
             className="border border-gray-300 hover:border-teal-600 hover:text-teal-600 text-black px-6 md:px-8 py-3 rounded-lg font-medium transition w-full sm:w-auto"
           >
-            Get Free Consultation
+            {t("hero.getConsultation")}
           </button>
         </div>
 
         {/* Supporting text */}
         <p className="text-xs md:text-sm text-gray-500">
-          ✓ Clean code • ✓ Fast delivery • ✓ Free consultation • ✓ 24h response
+          {t("hero.supporting")}
         </p>
 
         {/* Geometric shapes - Hidden on mobile */}

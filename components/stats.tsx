@@ -1,32 +1,35 @@
 "use client"
 
 import { Code2, Zap, Users, CheckCircle } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 const Stats = () => {
+  const { t } = useTranslation()
+
   const stats = [
     {
       icon: Code2,
-      value: "10+",
-      label: "Projects Delivered",
-      description: "Completed across various industries and scales",
+      value: t("stats.items.0.value"),
+      label: t("stats.items.0.label"),
+      description: t("stats.items.0.description"),
     },
     {
       icon: Users,
-      value: "3+",
-      label: "Years Experience",
-      description: "Continuous learning and professional development",
+      value: t("stats.items.1.value"),
+      label: t("stats.items.1.label"),
+      description: t("stats.items.1.description"),
     },
     {
       icon: Zap,
-      value: "24h",
-      label: "Response Time",
-      description: "Quick communication guaranteed",
+      value: t("stats.items.2.value"),
+      label: t("stats.items.2.label"),
+      description: t("stats.items.2.description"),
     },
     {
       icon: CheckCircle,
-      value: "100%",
-      label: "On-Time Delivery",
-      description: "All projects delivered within agreed timelines",
+      value: t("stats.items.3.value"),
+      label: t("stats.items.3.label"),
+      description: t("stats.items.3.description"),
     },
   ]
 

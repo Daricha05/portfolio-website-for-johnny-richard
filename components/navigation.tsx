@@ -1,8 +1,12 @@
 "use client"
 
 import { Code2 } from "lucide-react"
+import { useTranslation } from "react-i18next"
+import LanguageSwitcher from "@/components/language-switcher"
 
 const Navigation = () => {
+  const { t } = useTranslation()
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: "smooth" })
@@ -10,7 +14,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection("hero")}>
           <Code2 className="w-6 h-6 text-teal-600" />
@@ -20,28 +24,26 @@ const Navigation = () => {
         {/* Links */}
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollToSection("projects")} className="text-gray-600 hover:text-black transition">
-            Work
+            {t("navigation.work")}
           </button>
           <button onClick={() => scrollToSection("services")} className="text-gray-600 hover:text-black transition">
-            Services
+            {t("navigation.services")}
           </button>
           <button onClick={() => scrollToSection("skills")} className="text-gray-600 hover:text-black transition">
-            Skills
+            {t("navigation.skills")}
           </button>
           <button onClick={() => scrollToSection("process")} className="text-gray-600 hover:text-black transition">
-            How I Work
+            {t("navigation.howIWork")}
           </button>
           <button onClick={() => scrollToSection("contact")} className="text-gray-600 hover:text-black transition">
-            Contact
+            {t("navigation.contact")}
           </button>
+          <LanguageSwitcher />
         </div>
 
-        <button
-          onClick={() => scrollToSection("contact")}
-          className="bg-teal-600 hover:bg-teal-500 text-white px-6 py-2 rounded-full transition font-medium text-sm md:text-base"
-        >
-          Free Consultation
-        </button>
+        <div className="md:hidden flex items-center">
+          <LanguageSwitcher />
+        </div>
       </div>
     </nav>
   )

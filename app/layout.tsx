@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import I18nProvider from "@/components/i18n-provider"
 import "./globals.css"
 
 const geist = Geist({ subsets: ["latin"] })
@@ -9,9 +10,9 @@ const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://johnny-richard-dev.vercel.app"),
-  title: "Johnny Richard - Full Stack Web Developer",
+  title: "Johnny Richard - Developpeur Web Full Stack",
   description:
-    "Full Stack Web Developer specializing in scalable web applications and robust APIs. React, Django, Spring Boot, Laravel, FastAPI. Available for freelance projects worldwide.",
+    "Developpeur Web Full Stack specialise en applications web evolutives et API robustes. React, Django, Spring Boot, Laravel, FastAPI. Disponible pour des projets freelance dans le monde entier.",
   keywords: [
     "Full Stack Developer",
     "Freelance Developer",
@@ -65,9 +66,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" translate="no" suppressHydrationWarning>
+    <html lang="fr" >
       <body className={`${geist.className} font-sans antialiased bg-white text-black`}>
-        {children}
+        <I18nProvider>{children}</I18nProvider>
         <Analytics />
       </body>
     </html>

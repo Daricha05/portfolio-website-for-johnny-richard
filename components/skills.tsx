@@ -1,57 +1,60 @@
 "use client"
 
 import { Code, Server, Database, Globe, Zap, Terminal } from "lucide-react"
-
-const skillsData = [
-  {
-    id: 1,
-    category: "Frontend",
-    icon: Code,
-    skills: ["React", "Vite", "Tailwind CSS"],
-  },
-  {
-    id: 2,
-    category: "Backend",
-    icon: Server,
-    skills: ["Spring Boot", "Django", "FastAPI", "Laravel", "Express.js"],
-  },
-  {
-    id: 3,
-    category: "Databases",
-    icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "MySQL"],
-  },
-  {
-    id: 4,
-    category: "APIs",
-    icon: Globe,
-    skills: ["REST APIs", "GraphQL", "WebSockets"],
-  },
-  {
-    id: 5,
-    category: "Performance",
-    icon: Zap,
-    skills: ["Optimization", "Caching", "CDN"],
-  },
-  {
-    id: 6,
-    category: "DevOps",
-    icon: Terminal,
-    skills: ["Docker", "Git", "CI/CD", "AWS"],
-  },
-]
+import { useTranslation } from "react-i18next"
 
 const Skills = () => {
+  const { t } = useTranslation()
+
+  const skillsData = [
+    {
+      id: 1,
+      category: t("skills.categories.frontend"),
+      icon: Code,
+      skills: ["React", "Vite", "Tailwind CSS"],
+    },
+    {
+      id: 2,
+      category: t("skills.categories.backend"),
+      icon: Server,
+      skills: ["Spring Boot", "Django", "FastAPI", "Laravel", "Express.js"],
+    },
+    {
+      id: 3,
+      category: t("skills.categories.databases"),
+      icon: Database,
+      skills: ["PostgreSQL", "MongoDB", "MySQL"],
+    },
+    {
+      id: 4,
+      category: t("skills.categories.apis"),
+      icon: Globe,
+      skills: ["REST APIs", "GraphQL", "WebSockets"],
+    },
+    {
+      id: 5,
+      category: t("skills.categories.performance"),
+      icon: Zap,
+      skills: ["Optimization", "Caching", "CDN"],
+    },
+    {
+      id: 6,
+      category: t("skills.categories.devops"),
+      icon: Terminal,
+      skills: ["Docker", "Git", "CI/CD", "AWS"],
+    },
+  ]
+
   return (
     <section id="skills" className="py-16 md:py-20 px-4 md:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
         <div className="mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 md:mb-4 text-center">
-            Technologies I Use
+            {t("skills.title")}
           </h2>
           <p className="text-gray-600 text-base md:text-lg text-center max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable applications and APIs.
+            {t("skills.subtitle")}
           </p>
         </div>
 

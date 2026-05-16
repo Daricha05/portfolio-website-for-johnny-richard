@@ -1,0 +1,248 @@
+{
+  "navigation": {
+    "work": "Work",
+    "services": "Services",
+    "skills": "Skills",
+    "howIWork": "How I Work",
+    "contact": "Contact",
+    "freeConsultation": "Free Consultation",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Full Stack Web & API Developer",
+    "titleStart": "I build scalable",
+    "titleHighlightOne": "web applications",
+    "titleMiddle": "and robust",
+    "titleHighlightTwo": "APIs",
+    "subtitle": "I help businesses and startups develop modern digital solutions using Spring Boot, Django, FastAPI, Laravel, Express.js, and React. Let's build something extraordinary together.",
+    "viewWork": "View My Work",
+    "getConsultation": "Get Free Consultation",
+    "supporting": "Clean code • Fast delivery • Free consultation • 24h response"
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "10+",
+        "label": "Projects Delivered",
+        "description": "Completed across various industries and scales"
+      },
+      {
+        "value": "3+",
+        "label": "Years Experience",
+        "description": "Continuous learning and professional development"
+      },
+      {
+        "value": "24h",
+        "label": "Response Time",
+        "description": "Quick communication guaranteed"
+      },
+      {
+        "value": "100%",
+        "label": "On-Time Delivery",
+        "description": "All projects delivered within agreed timelines"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of my recent work building scalable applications and robust APIs.",
+    "viewDetails": "View details",
+    "openImage": "View image",
+    "contactCta": "Discuss a similar project",
+    "closeHint": "Click anywhere to close",
+    "detail": {
+      "title": "Project details",
+      "problem": "Context",
+      "solution": "Solution",
+      "impact": "Impact",
+      "stack": "Tech stack"
+    },
+    "status": {
+      "inProgress": "In progress",
+      "completed": "Delivered"
+    },
+    "items": [
+      {
+        "title": "Payroll Management Web App",
+        "role": "Full Stack Developer",
+        "company": "Client project",
+        "location": "Madagascar",
+        "period": "2024",
+        "description": "A collaborative payroll management platform designed for HR cabinets and companies, enabling smooth data exchange and automated processing.",
+        "problem": "Payroll exchanges were manual, slow, and error-prone between HR teams and companies.",
+        "solution": "Built a centralized platform with collaborative workflows and automation for critical payroll operations.",
+        "impact": "Faster processing, better data reliability, and significant operational time savings."
+      },
+      {
+        "title": "Internal Messaging Platform",
+        "role": "Full Stack Developer",
+        "company": "Client project",
+        "location": "Madagascar",
+        "period": "2024",
+        "description": "A real-time corporate messaging system built to improve communication between employees and clients.",
+        "problem": "Teams were losing time across fragmented channels and had low responsiveness on sensitive exchanges.",
+        "solution": "Delivered a real-time messaging platform with structured channels, notifications, and centralized history.",
+        "impact": "Smoother communication, shorter response cycles, and better internal-external coordination."
+      },
+      {
+        "title": "Multi-School CRM Platform",
+        "role": "Backend Developer",
+        "company": "Client project",
+        "location": "Madagascar",
+        "period": "2024",
+        "description": "A complete school management system covering enrollment, students, finances, permissions, and multi-institution dashboards.",
+        "problem": "Multi-school operations were fragmented, with limited visibility across academic and financial data.",
+        "solution": "Designed a centralized CRM with role management, core business modules, and consolidated dashboards.",
+        "impact": "Simplified institution management, better tracking, and improved administrative decision-making."
+      },
+      {
+        "title": "National Data Visualization Platform",
+        "role": "Laravel Developer",
+        "company": "INSTAT",
+        "location": "Antananarivo",
+        "period": "2024",
+        "description": "Built for INSTAT Madagascar. Dynamic dashboards for visualizing national export/import statistics and business data.",
+        "problem": "National datasets were difficult to explore quickly for economic analysis.",
+        "solution": "Created interactive dashboards with clear visualizations, business filters, and fast data access.",
+        "impact": "Quicker trend analysis, improved statistical communication, and stronger decision support."
+      },
+      {
+        "title": "Webya",
+        "role": "Full Stack Web Developer",
+        "company": "BIENFE",
+        "location": "Antananarivo",
+        "period": "In progress",
+        "description": "Development of a web platform that helps SMEs, startups, and tourism businesses quickly create personalized professional websites at lower cost.",
+        "problem": "Small organizations needed a professional web presence but had tight budgets and timelines.",
+        "solution": "Developing a rapid website creation platform with customizable templates and scalable architecture.",
+        "impact": "Faster online launch, lower go-to-market costs, and better accessibility for local businesses."
+      },
+      {
+        "title": "Besti",
+        "role": "Backend Developer",
+        "company": "BIENFE",
+        "location": "Antananarivo",
+        "period": "April 2025",
+        "description": "Design and development of a quotation management web application to streamline communication between clients and BIENFE.",
+        "problem": "Quotation tracking lacked centralization and slowed down client-business interactions.",
+        "solution": "Built a quotation management app with clear flows, request history, and structured follow-up.",
+        "impact": "Smoother sales process, better traceability, and stronger client collaboration."
+      },
+      {
+        "title": "Inbox Zero Automatiser",
+        "role": "AI and Automation Developer",
+        "company": "Personal",
+        "location": "Antananarivo",
+        "period": "April 2025",
+        "description": "Complete inbox automation: AI email classification, urgent Discord alerts, booking-link delivery, spam cleanup, Gmail color labels, lead tracking, and weekly reporting.",
+        "problem": "Manual inbox handling consumed time and caused missed commercial opportunities.",
+        "solution": "Built an AI-driven n8n workflow to classify, route, alert, and enrich email actions automatically.",
+        "impact": "Cleaner inbox, faster response on priority messages, and automated weekly lead follow-up."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services I Offer",
+    "subtitle": "Comprehensive solutions for building, improving, and scaling your digital products.",
+    "items": [
+      {
+        "title": "Web Application Development",
+        "description": "Custom dashboards, CRMs, internal tools, management systems, and modern web applications built with clean architectures and scalable backends."
+      },
+      {
+        "title": "API Development & Integration",
+        "description": "High-performance REST APIs, secure authentication, business logic implementation, third-party integrations, and complete documentation."
+      },
+      {
+        "title": "Automation with n8n",
+        "description": "Design of automation workflows for emails, CRM updates, follow-ups, lead qualification, tool synchronization, and recurring reporting to save time and improve operational reliability."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technologies I Use",
+    "subtitle": "A comprehensive toolkit for building modern, scalable applications and APIs.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "apis": "APIs",
+      "performance": "Performance",
+      "devops": "DevOps"
+    }
+  },
+  "process": {
+    "title": "How I Work",
+    "subtitle": "A transparent, collaborative process designed to deliver results you can trust.",
+    "ready": "Ready to start your project?",
+    "cta": "Get Free Consultation",
+    "steps": [
+      {
+        "title": "Consultation",
+        "description": "Free initial consultation to understand your project goals, requirements, and timeline."
+      },
+      {
+        "title": "Planning & Proposal",
+        "description": "Detailed project plan, technical architecture, and transparent pricing proposal."
+      },
+      {
+        "title": "Development",
+        "description": "Clean code development with regular updates and transparent communication throughout."
+      },
+      {
+        "title": "Testing & QA",
+        "description": "Rigorous testing, bug fixes, and optimization to ensure reliability and performance."
+      },
+      {
+        "title": "Deployment",
+        "description": "Safe deployment to production with proper monitoring and post-launch setup."
+      },
+      {
+        "title": "Support",
+        "description": "Ongoing support and maintenance to keep your application running smoothly."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Build Something Great",
+    "subtitle": "Ready to start your project? Get a free consultation with no strings attached.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "selectType": "Select project type",
+    "messagePlaceholder": "Tell me about your project...",
+    "error": "An error occurred. Please try again.",
+    "sent": "Message sent! I'll respond within 24h",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "getInTouch": "Get in Touch",
+    "intro": "I'm available for freelance missions, remote or on-site. Whether you need a web app, an API, or long-term support, I can help bring your ideas to life.",
+    "response24h": "Response within 24 hours",
+    "freeConsultation": "Free initial consultation",
+    "flexible": "Flexible scheduling (Remote or On-site)",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Location",
+    "locationValue": "Madagascar • Remote • Flexible",
+    "why": "Why contact me?",
+    "whyText": "I'm dedicated to understanding your vision and delivering solutions that exceed expectations. Free first consultation, no obligation.",
+    "types": {
+      "webApp": "Web Application (Dashboard, CRM, SaaS)",
+      "restApi": "REST API Development",
+      "website": "Website / Landing Page",
+      "automation": "Automation with n8n",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "services": "Services",
+    "webDevelopment": "Web Development",
+    "apiDevelopment": "API Development",
+    "optimization": "Optimization",
+    "techStack": "Tech Stack",
+    "backend": "Backend: Express, Spring Boot, Django, Laravel",
+    "frontend": "Frontend: React, Vite, TailwindCSS",
+    "database": "Database: PostgreSQL, MySQL, MongoDB",
+    "connect": "Connect",
+    "copyright": "Building the future, one app at a time."
+  }
+}

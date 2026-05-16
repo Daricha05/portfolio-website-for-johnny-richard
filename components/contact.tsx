@@ -3,8 +3,10 @@
 import type React from "react"
 import { useState, useRef } from "react"
 import { Mail, MapPin, Phone, CheckCircle2 } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -56,7 +58,7 @@ const Contact = () => {
     } catch (err) {
       console.error("Error:", err)
       if (isMountedRef.current) {
-        setError("Une erreur s'est produite. Veuillez réessayer.")
+        setError(t("contact.error"))
       }
     } finally {
       if (isMountedRef.current) {
@@ -69,9 +71,9 @@ const Contact = () => {
     <section id="contact" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Let's Build Something Great</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">{t("contact.title")}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to start your project? Get a free consultation with no strings attached.
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -82,7 +84,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Your name"
+                placeholder={t("contact.namePlaceholder")}
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600"
@@ -92,7 +94,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="your@email.com"
+                placeholder={t("contact.emailPlaceholder")}
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600"
@@ -107,16 +109,16 @@ const Contact = () => {
                 required
                 disabled={isSubmitting}
               >
-                <option value="" disabled>Select project type</option>
-                <option value="web-app">Web Application (Dashboard, CRM, SaaS)</option>
-                <option value="rest-api">REST API Development</option>
-                <option value="website">Website / Landing Page</option>
-                <option value="maintenance">Maintenance & Optimization</option>
-                <option value="other">Other</option>
+                <option value="" disabled>{t("contact.selectType")}</option>
+                <option value="web-app">{t("contact.types.webApp")}</option>
+                <option value="rest-api">{t("contact.types.restApi")}</option>
+                <option value="website">{t("contact.types.website")}</option>
+                <option value="automation">{t("contact.types.automation")}</option>
+                <option value="other">{t("contact.types.other")}</option>
               </select>
               <textarea
                 name="message"
-                placeholder="Tell me about your project..."
+                placeholder={t("contact.messagePlaceholder")}
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
@@ -140,12 +142,12 @@ const Contact = () => {
                 {submitted ? (
                   <>
                     <CheckCircle2 className="w-5 h-5" />
-                    Message sent! I'll respond within 24h
+                    {t("contact.sent")}
                   </>
                 ) : isSubmitting ? (
-                  "Sending..."
+                  t("contact.sending")
                 ) : (
-                  "Send Message"
+                  t("contact.send")
                 )}
               </button>
             </form>
@@ -154,23 +156,22 @@ const Contact = () => {
           {/* Right side - Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-black mb-4">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">{t("contact.getInTouch")}</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                I'm available for freelance missions, remote or on-site. Whether you need a web app, an API, or
-                long-term support, I can help bring your ideas to life.
+                {t("contact.intro")}
               </p>
               <div className="flex flex-col gap-2 mb-6">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
                   <CheckCircle2 className="w-4 h-4 text-teal-600" />
-                  <span>Response within 24 hours</span>
+                  <span>{t("contact.response24h")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
                   <CheckCircle2 className="w-4 h-4 text-teal-600" />
-                  <span>Free initial consultation</span>
+                  <span>{t("contact.freeConsultation")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
                   <CheckCircle2 className="w-4 h-4 text-teal-600" />
-                  <span>Flexible scheduling (Remote or On-site)</span>
+                  <span>{t("contact.flexible")}</span>
                 </div>
               </div>
             </div>
@@ -179,7 +180,7 @@ const Contact = () => {
               <div className="flex gap-4 items-start">
                 <Mail className="w-6 h-6 text-teal-600 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-black">Email</p>
+                  <p className="font-semibold text-black">{t("contact.email")}</p>
                   <a href="mailto:johnnyricharde5@gmail.com" className="text-gray-600 hover:text-teal-600 transition">
                     johnnyricharde5@gmail.com
                   </a>
@@ -188,7 +189,7 @@ const Contact = () => {
               <div className="flex gap-4 items-start">
                 <Phone className="w-6 h-6 text-teal-600 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-black">WhatsApp</p>
+                  <p className="font-semibold text-black">{t("contact.whatsapp")}</p>
                   <a href="tel:+261340912440" className="text-gray-600 hover:text-teal-600 transition">
                     +261 34 09 124 40
                   </a>
@@ -197,16 +198,15 @@ const Contact = () => {
               <div className="flex gap-4 items-start">
                 <MapPin className="w-6 h-6 text-teal-600 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-black">Location</p>
-                  <p className="text-gray-600">Madagascar • Remote • Flexible</p>
+                  <p className="font-semibold text-black">{t("contact.location")}</p>
+                  <p className="text-gray-600">{t("contact.locationValue")}</p>
                 </div>
               </div>
             </div>
 
             <div className="p-4 bg-teal-50 border border-teal-200 rounded-lg">
               <p className="text-sm text-teal-900">
-                <strong>Why contact me?</strong> I'm dedicated to understanding your vision and delivering solutions
-                that exceed expectations. Free first consultation, no obligation.
+                <strong>{t("contact.why")}</strong> {t("contact.whyText")}
               </p>
             </div>
           </div>
